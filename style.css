@@ -6,6 +6,9 @@ body{
     margin: 0;
     background-color: #fcfcfc;
 }
+
+/* NavBar */
+
 #navbar {
     padding:0;
     width: 50%;
@@ -25,15 +28,27 @@ body{
     font-weight: 500;
     display: inline-block;
 }
-#horizontal-line{
+
+/* Lines */
+
+#horizontal-line-head{
     width: 50%;
     height: 2px;
-    margin: 0.7vw auto;
+    margin: 1% auto;
     background-color:#252525;
 }
+#horizontal-line-photo{
+    width: 70%;
+    height: 2px;
+    margin: 4% auto;
+    background-color:#252525;
+}
+
+/* Team photos */
+
 #team-photos-container{
-    text-align: center;
-    border-radius: 20px;
+    animation-duration: 1s;
+    animation-name: card-appear;
 }
 #team-photos-container p{
     text-transform: uppercase;
@@ -41,8 +56,12 @@ body{
     font-weight: 500;
     font-size: 2.7vw;
     margin: 1vw auto;
+    margin-top: 0;
 }
-.photo-line{
+
+/* Cards */
+
+.card-line{
     display: flex;
     justify-content: center;
 }
@@ -72,4 +91,38 @@ body{
     font-size: 1.5vw;
     text-align: center;
     font-weight: 500;
+}
+
+/* Content */
+
+.content-container{
+    background-color: #ffffff;
+    min-height: 5vw;
+    margin: 2vw auto;
+    width: 98%;
+    box-shadow: 10px 10px 20px 0px #5a5a5a7a;
+    text-align: center;
+    border-radius: 1vw;
+}
+
+/* Keyframes */
+
+@keyframes navbar-appear {
+from {
+    margin-top: 10%;
+    opacity: 0;
+}
+
+to {
+    opacity: 100%;
+}
+}
+@keyframes card-appear {
+    from{
+        opacity: 0;
+        margin-top: 10%;
+    }
+    to {
+        opacity: 100%;
+    }
 }
