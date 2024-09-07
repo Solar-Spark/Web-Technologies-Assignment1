@@ -3,69 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="robotics, music, and art.">
     <title>Hobbies</title>
     <style>
         * {
             margin: 0;
             padding: 0;
-            color: #252525;
+            box-sizing: border-box;
+            font-family: 'Kanit';
+        }
+
+        /* NavBar */
+        #navbar {
+            padding: 0;
+            width: 50%;
+            margin: 1.5vw auto;
+            list-style-type: none;
+            text-align: center;
+            display: block;
+            background-color: white;
+        }
+        #navbar li {
+            margin: 5%;
+            display: inline; 
+        }
+        #navbar a {
+            font-size: 1vw;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 500;
+            display: inline-block;
+            color: black;
         }
 
         body {
-            font-family: 'Kanit';
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: white;
+            background-color: #f4f4f9;
+            color: #252525;
         }
 
-        .container {
-            width: 60%;
+        header {
             text-align: center;
+            padding: 50px 0;
+            background-color: #252525;
+            color: #fff;
         }
 
         h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            color: black;
-            line-height: 1.2;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        .images {
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .card {
             display: flex;
-            margin: 3rem 0;
-            gap: 200px;
+            flex-direction: row;
+            align-items: center;
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
         }
 
-        .image-container {
-            border: 10px solid #59515E;
-            padding: 10px;
-            background-color: white;
+        .card:hover {
+            transform: scale(1.03);
         }
 
-        .image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .card img {
+            width: 170px;
+            height: 250px;
+            border-radius: 20%;
+            object-fit: cover;
+            margin-right: 30px;
+        }
+
+        .content {
+            max-width: 500px; /* Limits the width of the text */
+            margin: 0; /* Centers the text block */
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2b2e4a;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #252525;
+            line-height: 1.5;
+        }
+
+        /* image on the right for second card */
+        .card:nth-child(2) {
+            margin-left: 15%;
+        }
+        .card:nth-child(3) {
+            flex-direction: row-reverse;
+            margin-right: 15%;
+        }
+        .card:nth-child(4) {
+            margin-left: 15%;
+        }
+
+        /* Animation */
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .card img {
+                margin: 0 0 15px 0;
+            }
+
+            .card:nth-child(2),
+            .card:nth-child(3),
+            .card:nth-child(4) {
+                margin: 0; /* Reset margin for mobile view */
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #252525;
+            color: #fff;
+        }
+
+        footer p {
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Electronics and Robotics <br> HOBBIE</h1>
-        <div class="images">
-            <div class="image-container">
-                <img src="images/Robot_Pet.jpeg" alt="Robot Pet">
-            </div>
-            <div class="image-container">
-                <img src="images/Robot_Arm.jpg" alt="Robot Arm">
-            </div>
+    <header>
+        <ul id="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="hobbie.html">Hobbies</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+        <h1>Explore Our Unique Hobbies</h1>
+        <p>Discover the passions that drive us in technology, music, and art.</p>
+    </header>
+
+    <div class="card">
+        <img src="images/Pavel.jpg" alt="Pavel">
+        <div class="content">
+            <h2 style="text-align: right;">Engineering & Robotics</h2>
+            <p style="text-align: right;">Pavel is deeply passionate about designing and building machines. He loves working on robotics projects and is always exploring new ways to push the boundaries of automation and artificial intelligence.</p>
         </div>
-        <p>
-            Learn the art of building robots, from beginner kits to advanced robotics design. 
-            Join over 10,000 students and become a part of the future of technology.
-        </p>
     </div>
+  
+    <div class="card">
+        <img src="images/Ernur.jpg" alt="Ernur">
+        <div class="content">
+            <h2>Playing the Guitar</h2>
+            <p>Ernur's passion lies in playing the guitar. He enjoys exploring different musical genres and thrives on performing live, using music as a powerful outlet for his creativity.</p>
+        </div>
+    </div>
+  
+    <div class="card">
+        <img src="images/Abu.jpg" alt="Abukhassym">
+        <div class="content">
+            <h2 style="text-align: right;">Doodling & Painting</h2>
+            <p style="text-align: right;">Abukhassym loves to express his creativity through doodling and painting. His artwork serves as a canvas for his emotions and ideas, transforming abstract thoughts into visual stories.</p>
+        </div>
+    </div>
+  
+    <footer>
+        <p>Excited by our passions? Get in touch—we’d love to tell you more!!</p>
+    </footer>
 </body>
 </html>
