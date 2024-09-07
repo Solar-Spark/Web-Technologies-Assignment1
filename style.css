@@ -32,30 +32,37 @@ body{
 /* Lines */
 
 #horizontal-line-head{
+    animation-duration: 1s;
+    animation-name: line-appear;
     width: 50%;
     height: 2px;
     margin: 1% auto;
     background-color:#252525;
 }
 #horizontal-line-photo{
+    animation-duration: 1s;
+    animation-name: line-appear;
     width: 70%;
     height: 2px;
-    margin: 4% auto;
+    margin: 3% auto;
     background-color:#252525;
 }
 
 /* Team photos */
 
 #team-photos-container{
+    background: linear-gradient(45deg, #111111, #363636);;
     animation-duration: 1s;
     animation-name: card-appear;
+    padding-top: 2vw;
 }
-#team-photos-container p{
+#team-photos-container h1{
+    color: #fcfcfc;
     text-transform: uppercase;
     text-align: center;
     font-weight: 500;
     font-size: 2.7vw;
-    margin: 1vw auto;
+    margin: 2vw auto;
     margin-top: 0;
 }
 
@@ -64,59 +71,80 @@ body{
 .card-line{
     display: flex;
     justify-content: center;
+    padding-bottom: 2vw;
 }
 .card{
+    text-align: center;
     width: 18%;
     margin: 0 2%;
 }
-.photo-card{
-    box-shadow: 10px 10px 30px 0px #5a5a5a94;
+.card img{
+    border: 0.7vw solid #fcfcfc;
+    box-shadow: 0.5vw 0.5vw 1.5vw 0vw #dadadaa2;
     text-align: center;
     border-radius: 2vw;
-    padding: 5%;
-}
-.photo-card img{
     display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 1.5vw;
-    object-fit: scale-down;
-    margin: 0;
+    width: 90%;
+    object-fit: cover;
+    margin: 0 auto;
 }
-.card h1{
+.card h2{
+    color: #fcfcfc;
     line-height: 1.8vw;
     width:50%;
-    display: inline-block;
     margin: 5% auto;
     font-size: 1.5vw;
-    text-align: center;
     font-weight: 500;
 }
 
 /* Content */
 
 .content-container{
-    background-color: #ffffff;
-    min-height: 5vw;
-    margin: 2vw auto;
-    width: 98%;
-    box-shadow: 10px 10px 20px 0px #5a5a5a7a;
-    text-align: center;
-    border-radius: 1vw;
+    display:flex;
+    height: 20vw;
+    margin-bottom: 5vw;;
 }
-
+#container-head{
+    color: #252525;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.7vw;
+}
+.content-text-block{
+    display: block;
+    border: 0.7vw solid #fcfcfc;
+    background-color: #fcfcfc;
+    box-shadow: 0.5vw 0.5vw 1.5vw 0vw #5a5a5a94;
+    border-radius: 1vw;
+    width: 60%;
+    margin: auto;
+    height: 100%;
+}
+.content-text-block h2{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 3vw;
+    margin-bottom: 1vw;
+}
+.content-text-block p{
+    font-size: 1.5vw;
+    margin: 3vw;
+    margin-top: 2vw;
+}
+.content-img-block{
+    display: block;
+    border: 0.7vw solid #fcfcfc;
+    box-shadow: 0.5vw 0.5vw 1.5vw 0vw #5a5a5a94;
+    border-radius: 1vw;
+    width: 30%;
+    margin: auto;
+    height: 100%;
+    object-fit: cover;
+}
 /* Keyframes */
 
-@keyframes navbar-appear {
-from {
-    margin-top: 10%;
-    opacity: 0;
-}
-
-to {
-    opacity: 100%;
-}
-}
 @keyframes card-appear {
     from{
         opacity: 0;
