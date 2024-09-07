@@ -52,11 +52,12 @@ body{
 
 #team-photos-container{
     background: linear-gradient(45deg, #111111, #363636);;
-    animation-duration: 1s;
-    animation-name: card-appear;
+    
     padding-top: 2vw;
 }
 #team-photos-container h1{
+    animation-duration: 1s;
+    animation-name: card-appear;
     color: #fcfcfc;
     text-transform: uppercase;
     text-align: center;
@@ -69,6 +70,8 @@ body{
 /* Cards */
 
 .card-line{
+    animation-duration: 1s;
+    animation-name: card-appear;
     display: flex;
     justify-content: center;
     padding-bottom: 2vw;
