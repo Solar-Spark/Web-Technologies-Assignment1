@@ -32,7 +32,8 @@
             text-align: center;
             font-weight: 1000;
             display: inline-block;
-            color: #fff;        }
+            color: #fff;
+        }
 
         body {
             background-color: #f4f4f9;
@@ -56,79 +57,49 @@
             margin-bottom: 20px;
         }
 
-        .card {
+        .content-container {
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            width: 90%;
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 15px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
+            height: auto;
+            margin: 5%;
+
         }
 
-        .card:hover {
-            transform: scale(1.03);
+        .content-text-block {
+            display: block;
+            border: 0.7vw solid #fcfcfc;
+            background-color: #fcfcfc;
+            box-shadow: 0.5vw 0.5vw 1.5vw 0vw #5a5a5a94;
+            border-radius: 1vw;
+            width: 60%;
+            margin: auto;
+            height: 100%;
         }
 
-        .card img {
-            width: 170px;
-            height: 250px;
-            border-radius: 20%;
+        .content-text-block h2 {
+            font-size: 2vw;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin: 3vw;
+            margin-bottom: 1vw;
+        }
+
+        .content-text-block p {
+            font-size: 1.5vw;
+            margin: 3vw;
+            margin-top: 2vw;
+        }
+
+        .content-img-block {
+            display: block;
+            border: 0.7vw solid #fcfcfc;
+            box-shadow: 0.5vw 0.5vw 1.5vw 0vw #5a5a5a94;
+            border-radius: 1vw;
+            width: 20%;
+            margin: auto;
             object-fit: cover;
-            margin-right: 30px;
         }
 
-        .content {
-            max-width: 500px; 
-            margin: 0;
-        }
-
-        .card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #2b2e4a;
-        }
-
-        .card p {
-            font-size: 1rem;
-            color: #252525;
-            line-height: 1.5;
-        }
-
-        /* image on the right for second card */
-        .card:nth-child(2) {
-            margin-left: 15%;
-        }
-        .card:nth-child(3) {
-            flex-direction: row-reverse;
-            margin-right: 15%;
-        }
-        .card:nth-child(4) {
-            margin-left: 15%;
-        }
-
-        /* Animation */
-        @media (max-width: 768px) {
-            .card {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .card img {
-                margin: 0 0 15px 0;
-            }
-
-            .card:nth-child(2),
-            .card:nth-child(3),
-            .card:nth-child(4) {
-                margin: 0; 
-            }
-        }
-
+        /* Footer */
         footer {
             text-align: center;
             padding: 10px 0;
@@ -139,6 +110,9 @@
         footer p {
             font-size: 1.2rem;
         }
+
+        /* */
+
     </style>
 </head>
 <body>
@@ -152,32 +126,33 @@
         <p>Discover the passions that drive us in technology, music, and art.</p>
     </header>
 
-    <div class="card">
-        <img src="images/Pavel.jpg" alt="Pavel">
-        <div class="content">
+    <!-- Adapted card blocks -->
+    <div class="content-container">
+        <img src="images/Pavel.jpg" alt="Pavel" class="content-img-block">
+        <div class="content-text-block">
             <h2 style="text-align: right;">Engineering & Robotics</h2>
             <p style="text-align: right;">Pavel is deeply passionate about designing and building machines. He loves working on robotics projects and is always exploring new ways to push the boundaries of automation and artificial intelligence.</p>
         </div>
     </div>
-  
-    <div class="card">
-        <img src="images/Ernur.jpg" alt="Ernur">
-        <div class="content">
+
+    <div class="content-container">
+        <div class="content-text-block">
             <h2>Playing the Guitar</h2>
             <p>Ernur's passion lies in playing the guitar. He enjoys exploring different musical genres and thrives on performing live, using music as a powerful outlet for his creativity.</p>
         </div>
+        <img src="images/Ernur.jpg" alt="Ernur" class="content-img-block">
     </div>
-  
-    <div class="card">
-        <img src="images/Abu.jpg" alt="Abukhassym">
-        <div class="content">
+
+    <div class="content-container">
+        <img src="images/Abu.jpg" alt="Abukhassym" class="content-img-block">
+        <div class="content-text-block">
             <h2 style="text-align: right;">Doodling & Painting</h2>
             <p style="text-align: right;">Abukhassym loves to express his creativity through doodling and painting. His artwork serves as a canvas for his emotions and ideas, transforming abstract thoughts into visual stories.</p>
         </div>
     </div>
-  
+
     <footer>
-        <p>Excited by our passions? Get in touch—we’d love to tell you more!!</p>
+        <p>Excited by our passions? Get in touch—we’d love to tell you more!</p>
     </footer>
 </body>
 </html>
